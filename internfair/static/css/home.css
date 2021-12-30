@@ -74,20 +74,33 @@ width:80vw;
 .c{
 	background: #416EA8;
     border-radius: 8px;
+
   }
 
+  .card{
+	  border: none !important;
+	  box-shadow: none !important;
+  }
  .card-body{
- 	margin-bottom:20px;
- 	margin-left: 20px;
- 	margin-right: 10px;
+ 	
+	 color: white;
+	background: #416EA8 !important;
 
  }
 .cardtext{
 	color: white;
 }
 
-.more-tests{
+#more-tests{
 	display: none;
 }
+.more-test-div button{
 
+
+}
+.card img{
+	width: 100%;
+	height: 100%;
+
+}
 
