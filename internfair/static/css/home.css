@@ -104,3 +104,6 @@ width:80vw;
 
 }
 
+.same-height{
+	height: 100% !important;
+}

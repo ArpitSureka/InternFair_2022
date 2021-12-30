@@ -5,9 +5,6 @@
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="{% static 'css/home.css' %}">
-	<!-- <link rel="stylesheet" href="../static/css/home.css"> -->
-
-
 	<!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
@@ -27,35 +24,48 @@
 </head>
 
 <body>
-	<div>
-	<nav class="navbar navbar-edit navbar-expand-lg navbar-light bg-light" style="padding: 0.5vh 5vw; box-shadow: 0px 2px 8px rgba(72, 74, 82, 0.08); background-color: #FFFFFF !important">
-  <div>
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      
-      <a class="navbar-brand" id="heading" href="#"><svg width="100" height="18" viewBox="0 0 116 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.475 20V0.399999H3.695V20H0.475ZM7.74516 20V6.952H10.7972V8.772C11.6372 7.33467 13.0558 6.616 15.0532 6.616C18.2265 6.616 19.8132 8.34267 19.8132 11.796V20H16.7612V13.196C16.7612 11.7773 16.5465 10.76 16.1172 10.144C15.6878 9.528 14.9505 9.22 13.9052 9.22C12.9158 9.22 12.1505 9.53733 11.6092 10.172C11.0678 10.788 10.7972 11.6747 10.7972 12.832V20H7.74516ZM29.1297 17.424C29.7457 17.424 30.2591 17.3867 30.6697 17.312V20C30.0351 20.112 29.2791 20.168 28.4017 20.168C27.8977 20.168 27.4591 20.1307 27.0857 20.056C26.7124 19.9813 26.2737 19.8133 25.7697 19.552C25.2657 19.272 24.8737 18.796 24.5937 18.124C24.3137 17.452 24.1737 16.6027 24.1737 15.576V9.5H21.9617V6.952H24.1737V3.004H27.2257V6.952H30.2217V9.5H27.2257V14.876C27.2257 15.9213 27.3751 16.612 27.6737 16.948C27.9724 17.2653 28.4577 17.424 29.1297 17.424ZM45.1549 12.804C45.1549 13.14 45.1269 13.7 45.0709 14.484H35.3829C35.4202 15.5107 35.7562 16.304 36.3909 16.864C37.0256 17.4053 37.9029 17.676 39.0229 17.676C40.4602 17.676 41.4309 17.1813 41.9349 16.192H45.0149C44.8096 17.4053 44.1469 18.404 43.0269 19.188C41.9256 19.9533 40.5909 20.336 39.0229 20.336C36.9696 20.336 35.3456 19.72 34.1509 18.488C32.9562 17.256 32.3589 15.5853 32.3589 13.476C32.3589 11.3853 32.9469 9.724 34.1229 8.492C35.3176 7.24133 36.9136 6.616 38.9109 6.616C40.7776 6.616 42.2802 7.19467 43.4189 8.352C44.5762 9.49067 45.1549 10.9747 45.1549 12.804ZM35.3829 12.16H42.1589C42.1402 11.152 41.8416 10.3773 41.2629 9.836C40.7029 9.29467 39.9002 9.024 38.8549 9.024C37.7909 9.024 36.9509 9.31333 36.3349 9.892C35.7189 10.4707 35.4016 11.2267 35.3829 12.16ZM48.1045 20V6.952H51.1565V9.472C51.3805 8.59467 51.8192 7.932 52.4725 7.484C53.1259 7.01733 53.8445 6.784 54.6285 6.784C55.1325 6.784 55.5339 6.82133 55.8325 6.896V9.696C55.5152 9.65867 55.1139 9.64 54.6285 9.64C53.5459 9.64 52.6965 10.0413 52.0805 10.844C51.4645 11.628 51.1565 12.7573 51.1565 14.232V20H48.1045ZM58.3584 20V6.952H61.4104V8.772C62.2504 7.33467 63.6691 6.616 65.6664 6.616C68.8398 6.616 70.4264 8.34267 70.4264 11.796V20H67.3744V13.196C67.3744 11.7773 67.1598 10.76 66.7304 10.144C66.3011 9.528 65.5638 9.22 64.5184 9.22C63.5291 9.22 62.7638 9.53733 62.2224 10.172C61.6811 10.788 61.4104 11.6747 61.4104 12.832V20H58.3584ZM80.4684 2.948C80.1884 2.948 79.9364 2.96667 79.7124 3.004C79.507 3.04133 79.2737 3.12533 79.0124 3.256C78.7697 3.368 78.583 3.57333 78.4524 3.872C78.3217 4.17067 78.2564 4.544 78.2564 4.992V6.952H81.6724V9.5H78.2564V20H75.2044V9.5H72.5444V6.952H75.2044V5.048C75.2044 4.05867 75.363 3.228 75.6804 2.556C75.9977 1.86533 76.4084 1.37067 76.9124 1.072C77.435 0.754666 77.911 0.539999 78.3404 0.427998C78.7697 0.297332 79.199 0.231999 79.6284 0.231999C80.487 0.231999 81.1684 0.315999 81.6724 0.483999V3.06C81.579 3.06 81.3924 3.04133 81.1124 3.004C80.851 2.96667 80.6364 2.948 80.4684 2.948ZM89.2201 20.336C87.1855 20.336 85.6081 19.692 84.4881 18.404C83.3681 17.116 82.8081 15.4733 82.8081 13.476C82.8081 11.4973 83.3961 9.864 84.5721 8.576C85.7481 7.26933 87.3255 6.616 89.3041 6.616C90.1815 6.616 90.9841 6.80267 91.7121 7.176C92.4401 7.54933 93.0001 8.06267 93.3921 8.716V6.952H96.4441V20H93.3921V18.236C93.0188 18.8707 92.4308 19.384 91.6281 19.776C90.8441 20.1493 90.0415 20.336 89.2201 20.336ZM89.6681 17.62C90.9188 17.62 91.8708 17.228 92.5241 16.444C93.1961 15.66 93.5321 14.6707 93.5321 13.476C93.5321 12.2813 93.1961 11.292 92.5241 10.508C91.8708 9.724 90.9188 9.332 89.6681 9.332C88.4921 9.332 87.5588 9.724 86.8681 10.508C86.1961 11.2733 85.8601 12.2627 85.8601 13.476C85.8601 14.6893 86.1961 15.688 86.8681 16.472C87.5588 17.2373 88.4921 17.62 89.6681 17.62ZM103.522 4.432C103.093 4.86133 102.552 5.076 101.898 5.076C101.245 5.076 100.704 4.86133 100.274 4.432C99.8451 3.984 99.6304 3.44267 99.6304 2.808C99.6304 2.17333 99.8451 1.64133 100.274 1.212C100.704 0.763999 101.245 0.539999 101.898 0.539999C102.552 0.539999 103.093 0.763999 103.522 1.212C103.952 1.64133 104.166 2.17333 104.166 2.808C104.166 3.44267 103.952 3.984 103.522 4.432ZM100.358 20V6.952H103.41V20H100.358ZM107.331 20V6.952H110.383V9.472C110.607 8.59467 111.046 7.932 111.699 7.484C112.352 7.01733 113.071 6.784 113.855 6.784C114.359 6.784 114.76 6.82133 115.059 6.896V9.696C114.742 9.65867 114.34 9.64 113.855 9.64C112.772 9.64 111.923 10.0413 111.307 10.844C110.691 11.628 110.383 12.7573 110.383 14.232V20H107.331Z" fill="#416EA8"/>
-</svg>
-</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar" id="Home">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="headings"><a href="#Home" class="button">Home</a></li>
-        <li class="headings"><a href="#testimonials" class="button">Testimonials</a></li>
-        <li class="headings"><a href="#" class="button">Statistics</a></li>
-        <li class="headings"><a href="#CVBlogs" class="button">CV Blogs</a></li>
-        <li class="headings"><a href="#ContactUs" class="button" id="contact">Contact Us</a></li>
-      </ul>
-    
-    </div>
+	<nav class="navbar navbar-expand-lg navbar-light justify-content-start" style="padding: 0 5vw; box-shadow: 0px 2px 8px rgba(72, 74, 82, 0.08); background-color: #FFFFFF !important">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		<a class="navbar-brand" href="#" style="color: #416EA8;">
+			<b style="letter-spacing: 1px; font-weight: 600;">
 
-  </div>
-</nav>
-</div>
+				Internfair
+			</b>   
+		</a>
+	   
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+		  <ul class="nav navbar-nav navbar-right">
+			<li class="nav-item">
+				<a href="#Home" class="button">Home</a>
+			</li>
+			
+			<li class="nav-item">
+				<a href="#" class="button">Statistics</a>
+			</li>
+			<li class="nav-item">
+				<a href="#CVBlogs" class="button">CV Blogs</a>
+			</li>
+			<li class="nav-item">
+				<a href="#ContactUs" class="button" id="contact">Contact Us</a>
+			</li>
+		   
+		   
+		   
+		  </ul>
+		 
+		</div>
+	   
+	  </nav>
+
+
+
+<style>
+.nav-item{
+	padding: 2.5px 3px !important;
+}
+</style>
 
 <section  class="flex justify-content-center">
 	<div style="padding-left:5vw; padding-right:5vw;">
@@ -681,89 +691,188 @@
 
 	
 	
-	<div class=" row justify-content-between">
-		<div class="col-12 col-md-3 col-lg-3 card-div" style=" background: #416EA8;border-radius: 8px;">
-			<div class="card">
-				<!-- <img src="../static/image/FakeJanvi.jpg" class="card-img-top" alt="..."> -->
-				<img src="{% static 'image/FakeJanvi.jpg">
-				<div class="card-body">
-				  <h3 class="card-title"><b>Sriya Poluri</b></h3>
-					<h4><b>Department of chaplusi</b></h4>
-				  <p class="card-text">Overall, it was an amazing experience. Mentors helped me make my first CV and attend the interviews. The intern was in R&D... I had to browse the net and find any related articles regarding the topic given and sometimes simplify the given articles and make short notes on them. I really did improve some skills through the intern.</p>
-				  
-				</div>
-			  </div>
-		</div>
-		<div class="col-12 col-md-3 col-lg-3 card-div" style=" background: #416EA8;border-radius: 8px;">
-			<div class="card">
-				<!-- <img src="../static/image/FakeJanvi.jpg" class="card-img-top" alt="..."> -->
-				<img src="{% static 'image/FakeJanvi.jpg">
-				<div class="card-body">
-					<h3 class="card-title"><b>Atharva Tagalpallewar</b></h3>
-					<h4><b>Department of chaplusi</b></h4>
-				  <p class="card-text">It was a good experience overall. I got to know how work is done actually in startups and new companies.</p>
-				  
-				</div>
-			  </div>
-		</div>
-		<div class="col-12 col-md-3 col-lg-3 card-div" style=" background: #416EA8;border-radius: 8px;">
-			<div class="card">
-				<!-- <img src="../static/image/FakeJanvi.jpg" class="card-img-top" alt="..."> -->
-				<img src="{% static 'image/FakeJanvi.jpg">
-				<div class="card-body">
-					<h3 class="card-title"><b>Manish Prajapati</b></h3>
-					<h4><b>Department of chaplusi</b></h4>
-				  <p class="card-text">The experience was great, first time working with a startup on completely new technologies was awesome. The benefit was the stipend :-) and the knowledge that I gained.</p>
-				  
-				</div>
-			  </div>
-		</div>
+	<div class="row">
+		<div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col same-height h-100" >
+		   <div class="card c h-100"> 
+			
+				
+				
+			<div class="card-body">
 
-	</div>
-	<br><br>
-	<br>
+				<h3 class="card-title cardtext"><b>Sriya Poluri</b></h3>
+				
+				<h4 class="card-title cardtext"><b>BTech'24</b></h4>
 	
-	<div class=" row justify-content-between more-tests" id="more-tests" >
-		<div class="col-12 col-md-3 col-lg-3 card-div" style=" background: #416EA8;border-radius: 8px;">
-			<div class="card">
-				<!-- <img src="../static/image/FakeJanvi.jpg" class="card-img-top" alt="..."> -->
-				<img src="{% static 'image/FakeJanvi.jpg">
-				<div class="card-body">
-				  <h3 class="card-title"><b>Sriya Poluri</b></h3>
-					<h4><b>Department of chaplusi</b></h4>
-				  <p class="card-text">Overall, it was an amazing experience. Mentors helped me make my first CV and attend the interviews. The intern was in R&D... I had to browse the net and find any related articles regarding the topic given and sometimes simplify the given articles and make short notes on them. I really did improve some skills through the intern.</p>
-				  
-				</div>
-			  </div>
-		</div>
-		<div class="col-12 col-md-3 col-lg-3 card-div" style=" background: #416EA8;border-radius: 8px;">
-			<div class="card">
-				<!-- <img src="../static/image/FakeJanvi.jpg" class="card-img-top" alt="..."> -->
-				<img src="{% static 'image/FakeJanvi.jpg">
-				<div class="card-body">
-					<h3 class="card-title"><b>Atharva Tagalpallewar</b></h3>
-					<h4><b>Department of chaplusi</b></h4>
-				  <p class="card-text">It was a good experience overall. I got to know how work is done actually in startups and new companies.</p>
-				  
-				</div>
-			  </div>
-		</div>
-		<div class="col-12 col-md-3 col-lg-3 card-div" style=" background: #416EA8;border-radius: 8px;">
-			<div class="card">
-				<!-- <img src="../static/image/FakeJanvi.jpg" class="card-img-top" alt="..."> -->
-				<img src="{% static 'image/FakeJanvi.jpg">
-				<div class="card-body">
-					<h3 class="card-title"><b>Manish Prajapati</b></h3>
-					<h4><b>Department of chaplusi</b></h4>
-				  <p class="card-text">The experience was great, first time working with a startup on completely new technologies was awesome. The benefit was the stipend :-) and the knowledge that I gained.</p>
-				  
-				</div>
-			  </div>
-		</div>
+			   <p class="card-text cardtext">
+				Overall, it was an amazing experience. Mentors helped me make my first CV and attend the interviews. The intern was in R&D... I had to browse the net and find any related articles regarding the topic given and sometimes simplify the given articles and make short notes on them. <br><br>
+			   </p>
+				
+			   
+			 </div>
+	   
+	   </div>
+	   </div>
+	   
+	   <div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col same-height" >
+		   <div class="card c">
+		
+			   
+		   
+			<div class="card-body">
 
-	</div>
+				<h3 class="card-title cardtext"><b>Manish Prajapati</b></h3>
+				
+				<h4 class="card-title cardtext"><b>BTech'23</b></h4>
+		
+			   <p class="card-text cardtext">
+				The experience was great, first time working with a startup on completely new technologies was awesome. The benefit was the stipend :-) and the knowledge that I gained. <br><br><br><br>   
+			</p>
+			
+			   
+			 </div>
+	   
+	   </div>
+	   </div>
+	   
+	   <div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col same-height" >
+		   <div class="card c">
+		
+			   
+			
+			<div class="card-body">
+
+				<h3 class="card-title cardtext"><b>Atharva Tagalpallewar</b></h3>
+				
+				<h4 class="card-title cardtext"><b>BTech'24</b></h4>
+
+			   <p class="card-text cardtext">
+				It was a good experience overall. I got to know how work is done actually in startups and new companies. <br><br><br><br><br>
+			   </p>
+			   
+			 </div>
+	   
+	   </div>
+	   </div>
+	   
+			 
+		 </div>
+	
 	<br><br>
 	<br>
+	<div class="row more-tests" id="more-tests" >
+		
+		<div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col same-height" >
+		   <div class="card c">
+		
+			   
+			
+				
+				
+			<div class="card-body">
+				
+				<h3 class="card-title cardtext"><b>Gujju Shree Aditya</b></h3>
+				
+				<h4 class="card-title cardtext"><b>BTech'24</b></h4>
+	
+				
+			   <p class="card-text cardtext">
+				Excellent. Learned many great things about product management and learned how to work with a team.
+			   </p><br>
+			   
+			 </div>
+	   
+	   </div>
+	   </div>
+	   
+	   <div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col same-height" >
+		   <div class="card c">
+		
+			   
+		   
+			<div class="card-body">
+				
+				<h3 class="card-title cardtext"><b>Rushi Pankade</b></h3>
+				
+				<h4 class="card-title cardtext"><b>BTech'24</b></h4>
+			   <p class="card-text cardtext">
+				I learned many new terms about finance and technical things. How to approach people and interviews
+			   </p><br>
+			   
+			 </div>
+	   
+	   </div>
+	   </div>
+	   
+	   <div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col same-height" >
+		   <div class="card c">
+		
+			   
+			
+			<div class="card-body">
+				
+				<h3 class="card-title cardtext"><b>Ritesh Kumar</b></h3>
+				
+				<h4 class="card-title cardtext"><b>BTech'24</b></h4>
+			
+			   <p class="card-text cardtext">
+				Made me aware of how companies and startups run in the real-world and what problems do they face.
+			   </p><br>
+			   
+			 </div>
+	   
+	   </div>
+	   </div>
+	   
+			 
+		 </div>
+	<br><br>
+	<br>
+
+	<div class="row more-tests" id="more-tests" >
+		<div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col same-height" >
+		   <div class="card c">
+		
+			   
+			
+				
+				
+			<div class="card-body">
+				
+				<h3 class="card-title cardtext"><b>Ayushi Anand</b></h3>
+				
+				<h4 class="card-title cardtext"><b>BTech'24</b></h4>
+	
+				
+			   <p class="card-text cardtext">
+				The internship helped me get a taste of Product Management and how it feels to work in a team.
+			   </p><br>
+			   
+			 </div>
+	   
+	   </div>
+	   </div>
+	   
+	   <div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col same-height" >
+		   <div class="card c">
+		
+			   
+		   
+			<div class="card-body">
+				
+				<h3 class="card-title cardtext"><b>Prayag Sahu</b></h3>
+				
+				<h4 class="card-title cardtext"><b>BTech'23</b></h4>
+
+			   <p class="card-text cardtext">
+				Intern experience was good got know marketing tactics in the automobile sector in form of digital design.
+			   </p><br>
+			   
+			 </div>
+	   
+	   </div>
+	   </div>
+	</div>
+
 	
 
 	<div class="more-test-div text-right">
@@ -789,11 +898,11 @@
 	<br>
 	
 
-	<div class="card-deck row justify-content-between" >
-		<div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col card-col"  >
+	<div class="row row justify-content-between" >
+		<div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col same-height card-col"  >
 			<div class="card c">
 				<img class="card-img-top i" src="{% static 'image/FakeJanvi.jpg' %}" alt="Card image">
-				<img class="card-img-top i" src="../static/image/FakeJanvi.jpg" alt="Card image">
+				
 
 				<br>
 				<div class="card-body">
@@ -809,15 +918,15 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col card-col"  >
+		<div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col same-height card-col"  >
 			<div class="card c">
 				<img class="card-img-top i" src="{% static 'image/FakeJanvi.jpg' %}" alt="Card image">
-				<img class="card-img-top i" src="../static/image/FakeJanvi.jpg" alt="Card image">
+				
 			
 				
 				<br>
 			<div class="card-body">
-				<br>
+				
 				<h3 class="card-title cardtext"><b>Manish Prajapati</b></h3>
 				
 				<h4 class="card-title cardtext"><b>Department of chaplusi</b></h4>
@@ -830,11 +939,11 @@
 
 		</div>
 		</div>
-		<div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col card-col"  >
+		<div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col same-height card-col"  >
 		<div class="card c">
 
 			<img class="card-img-top i" src="{% static 'image/FakeJanvi.jpg' %}" alt="Card image">
-			<img class="card-img-top i" src="../static/image/FakeJanvi.jpg" alt="Card image">
+			
 		
 			
 			<br>
@@ -855,16 +964,16 @@
 
 		
 	</div>
-	<div class="card-deck row justify-content-between more-tests" >
-		<div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col card-col"  >
+	<div class="row row justify-content-between more-tests" >
+		<div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col same-height card-col"  >
 			<div class="card c">
 				<img class="card-img-top i" src="{% static 'image/FakeJanvi.jpg' %}" alt="Card image">
-				<img class="card-img-top i" src="../static/image/FakeJanvi.jpg" alt="Card image">
+				
 			
 				
 				<br>
 			<div class="card-body">
-				<br>
+				
 				<h3 class="card-title cardtext"><b>Sriya Poluri</b></h3>
 				
 				<h4 class="card-title cardtext"><b>Department of chaplusi</b></h4>
@@ -876,10 +985,10 @@
 
 		</div>
 		</div>
-		<div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col card-col"  >
+		<div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col same-height card-col"  >
 			<div class="card c">
 				<img class="card-img-top i" src="{% static 'image/FakeJanvi.jpg' %}" alt="Card image">
-				<img class="card-img-top i" src="../static/image/FakeJanvi.jpg" alt="Card image">
+				
 			
 				
 				<br>
@@ -897,10 +1006,10 @@
 
 			</div>
 		</div>
-		<div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col card-col"  >
+		<div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col same-height card-col"  >
 			<div class="card c">
 				<img class="card-img-top i" src="{% static 'image/FakeJanvi.jpg' %}" alt="Card image">
-				<img class="card-img-top i" src="../static/image/FakeJanvi.jpg" alt="Card image">
+				
 			
 				
 				<br>
@@ -960,18 +1069,10 @@
 </ul>
 
 			    </p>
-				<br>
-				<br>
+				
 				<div>
-				<button class="col col-lg-6 col-md-6 b"><p class="but"><b>Go to Site</b></p></button>
-				<div class=" col col-lg-2 col-md-2 ">
-					<br>
-				<svg width="160" height="19" viewBox="0 0 160 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.5 14V-9.53674e-07H3.7L8.18 10.72L12.64 -9.53674e-07H14.84V14H12.64V4.74L9.04 14H7.3L3.7 4.64V14H1.5ZM25.5477 12.86C24.6677 13.78 23.4743 14.24 21.9677 14.24C20.461 14.24 19.261 13.78 18.3677 12.86C17.4877 11.9267 17.0477 10.7533 17.0477 9.34C17.0477 7.92667 17.4877 6.76 18.3677 5.84C19.261 4.90667 20.461 4.44 21.9677 4.44C23.4743 4.44 24.6677 4.90667 25.5477 5.84C26.441 6.76 26.8877 7.92667 26.8877 9.34C26.8877 10.7533 26.441 11.9267 25.5477 12.86ZM19.9477 11.48C20.441 12.0267 21.1143 12.3 21.9677 12.3C22.821 12.3 23.4877 12.0267 23.9677 11.48C24.461 10.9333 24.7077 10.22 24.7077 9.34C24.7077 8.46 24.461 7.74667 23.9677 7.2C23.4877 6.65333 22.821 6.38 21.9677 6.38C21.1143 6.38 20.441 6.65333 19.9477 7.2C19.4677 7.74667 19.2277 8.46 19.2277 9.34C19.2277 10.22 19.4677 10.9333 19.9477 11.48ZM28.9781 14V4.68H31.1581V6.48C31.3181 5.85333 31.6315 5.38 32.0981 5.06C32.5648 4.72667 33.0781 4.56 33.6381 4.56C33.9981 4.56 34.2848 4.58667 34.4981 4.64V6.64C34.2715 6.61333 33.9848 6.6 33.6381 6.6C32.8648 6.6 32.2581 6.88667 31.8181 7.46C31.3781 8.02 31.1581 8.82667 31.1581 9.88V14H28.9781ZM44.4494 8.86C44.4494 9.1 44.4294 9.5 44.3894 10.06H37.4694C37.496 10.7933 37.736 11.36 38.1894 11.76C38.6427 12.1467 39.2694 12.34 40.0694 12.34C41.096 12.34 41.7894 11.9867 42.1494 11.28H44.3494C44.2027 12.1467 43.7294 12.86 42.9294 13.42C42.1427 13.9667 41.1894 14.24 40.0694 14.24C38.6027 14.24 37.4427 13.8 36.5894 12.92C35.736 12.04 35.3094 10.8467 35.3094 9.34C35.3094 7.84667 35.7294 6.66 36.5694 5.78C37.4227 4.88667 38.5627 4.44 39.9894 4.44C41.3227 4.44 42.396 4.85333 43.2094 5.68C44.036 6.49333 44.4494 7.55333 44.4494 8.86ZM37.4694 8.4H42.3094C42.296 7.68 42.0827 7.12667 41.6694 6.74C41.2694 6.35333 40.696 6.16 39.9494 6.16C39.1894 6.16 38.5894 6.36667 38.1494 6.78C37.7094 7.19333 37.4827 7.73333 37.4694 8.4ZM51.5563 14V4.68H53.7363V6.48C53.8963 5.85333 54.2096 5.38 54.6763 5.06C55.1429 4.72667 55.6563 4.56 56.2163 4.56C56.5763 4.56 56.8629 4.58667 57.0763 4.64V6.64C56.8496 6.61333 56.5629 6.6 56.2163 6.6C55.4429 6.6 54.8363 6.88667 54.3963 7.46C53.9563 8.02 53.7363 8.82667 53.7363 9.88V14H51.5563ZM67.0275 8.86C67.0275 9.1 67.0075 9.5 66.9675 10.06H60.0475C60.0742 10.7933 60.3142 11.36 60.7675 11.76C61.2208 12.1467 61.8475 12.34 62.6475 12.34C63.6742 12.34 64.3675 11.9867 64.7275 11.28H66.9275C66.7808 12.1467 66.3075 12.86 65.5075 13.42C64.7208 13.9667 63.7675 14.24 62.6475 14.24C61.1808 14.24 60.0208 13.8 59.1675 12.92C58.3142 12.04 57.8875 10.8467 57.8875 9.34C57.8875 7.84667 58.3075 6.66 59.1475 5.78C60.0008 4.88667 61.1408 4.44 62.5675 4.44C63.9008 4.44 64.9742 4.85333 65.7875 5.68C66.6142 6.49333 67.0275 7.55333 67.0275 8.86ZM60.0475 8.4H64.8875C64.8742 7.68 64.6608 7.12667 64.2475 6.74C63.8475 6.35333 63.2742 6.16 62.5275 6.16C61.7675 6.16 61.1675 6.36667 60.7275 6.78C60.2875 7.19333 60.0608 7.73333 60.0475 8.4ZM72.3944 14.24C71.221 14.24 70.2677 13.94 69.5344 13.34C68.801 12.74 68.4344 12.0067 68.4344 11.14H70.6144C70.6144 11.54 70.7877 11.8667 71.1344 12.12C71.4944 12.3733 71.9544 12.5 72.5144 12.5C72.9277 12.5 73.2544 12.4 73.4944 12.2C73.7344 12 73.8544 11.7333 73.8544 11.4C73.8544 10.8667 73.621 10.54 73.1544 10.42L70.7544 9.76C69.4077 9.38667 68.7344 8.52667 68.7344 7.18C68.7344 6.40667 69.0677 5.76 69.7344 5.24C70.401 4.70667 71.261 4.44 72.3144 4.44C73.501 4.44 74.4077 4.70667 75.0344 5.24C75.6744 5.77333 75.9944 6.47333 75.9944 7.34H73.8544C73.8544 6.95333 73.7077 6.65333 73.4144 6.44C73.1344 6.21333 72.741 6.1 72.2344 6.1C71.8477 6.1 71.5277 6.19333 71.2744 6.38C71.021 6.55333 70.8944 6.78 70.8944 7.06C70.8944 7.56667 71.161 7.9 71.6944 8.06L73.9144 8.7C74.5544 8.88667 75.0744 9.20667 75.4744 9.66C75.8744 10.1 76.0744 10.6133 76.0744 11.2C76.0744 12.1067 75.7477 12.84 75.0944 13.4C74.4544 13.96 73.5544 14.24 72.3944 14.24ZM86.075 12.86C85.195 13.78 84.0017 14.24 82.495 14.24C80.9883 14.24 79.7883 13.78 78.895 12.86C78.015 11.9267 77.575 10.7533 77.575 9.34C77.575 7.92667 78.015 6.76 78.895 5.84C79.7883 4.90667 80.9883 4.44 82.495 4.44C84.0017 4.44 85.195 4.90667 86.075 5.84C86.9683 6.76 87.415 7.92667 87.415 9.34C87.415 10.7533 86.9683 11.9267 86.075 12.86ZM80.475 11.48C80.9683 12.0267 81.6417 12.3 82.495 12.3C83.3483 12.3 84.015 12.0267 84.495 11.48C84.9883 10.9333 85.235 10.22 85.235 9.34C85.235 8.46 84.9883 7.74667 84.495 7.2C84.015 6.65333 83.3483 6.38 82.495 6.38C81.6417 6.38 80.9683 6.65333 80.475 7.2C79.995 7.74667 79.755 8.46 79.755 9.34C79.755 10.22 79.995 10.9333 80.475 11.48ZM92.8655 14.24C91.8121 14.24 90.9721 13.9267 90.3455 13.3C89.7188 12.6733 89.4055 11.7533 89.4055 10.54V4.68H91.5855V10C91.5855 10.7867 91.7321 11.38 92.0255 11.78C92.3188 12.18 92.8055 12.38 93.4855 12.38C94.2721 12.38 94.8455 12.16 95.2055 11.72C95.5655 11.2667 95.7455 10.6733 95.7455 9.94V4.68H97.9255V14H95.7455V12.7C95.1721 13.7267 94.2121 14.24 92.8655 14.24ZM100.716 14V4.68H102.896V6.48C103.056 5.85333 103.37 5.38 103.836 5.06C104.303 4.72667 104.816 4.56 105.376 4.56C105.736 4.56 106.023 4.58667 106.236 4.64V6.64C106.01 6.61333 105.723 6.6 105.376 6.6C104.603 6.6 103.996 6.88667 103.556 7.46C103.116 8.02 102.896 8.82667 102.896 9.88V14H100.716ZM111.688 14.24C110.261 14.24 109.128 13.7933 108.288 12.9C107.461 11.9933 107.048 10.8067 107.048 9.34C107.048 7.87333 107.461 6.69333 108.288 5.8C109.128 4.89333 110.261 4.44 111.688 4.44C112.968 4.44 113.994 4.76667 114.768 5.42C115.554 6.06 116.001 6.92 116.108 8H113.928C113.688 6.92 112.941 6.38 111.688 6.38C110.914 6.38 110.308 6.64 109.868 7.16C109.441 7.66667 109.228 8.39333 109.228 9.34C109.228 10.2867 109.441 11.02 109.868 11.54C110.308 12.0467 110.914 12.3 111.688 12.3C112.928 12.3 113.674 11.7933 113.928 10.78H116.108C116.001 11.8333 115.554 12.6733 114.768 13.3C113.994 13.9267 112.968 14.24 111.688 14.24ZM126.852 8.86C126.852 9.1 126.832 9.5 126.792 10.06H119.872C119.898 10.7933 120.138 11.36 120.592 11.76C121.045 12.1467 121.672 12.34 122.472 12.34C123.498 12.34 124.192 11.9867 124.552 11.28H126.752C126.605 12.1467 126.132 12.86 125.332 13.42C124.545 13.9667 123.592 14.24 122.472 14.24C121.005 14.24 119.845 13.8 118.992 12.92C118.138 12.04 117.712 10.8467 117.712 9.34C117.712 7.84667 118.132 6.66 118.972 5.78C119.825 4.88667 120.965 4.44 122.392 4.44C123.725 4.44 124.798 4.85333 125.612 5.68C126.438 6.49333 126.852 7.55333 126.852 8.86ZM119.872 8.4H124.712C124.698 7.68 124.485 7.12667 124.072 6.74C123.672 6.35333 123.098 6.16 122.352 6.16C121.592 6.16 120.992 6.36667 120.552 6.78C120.112 7.19333 119.885 7.73333 119.872 8.4ZM132.219 14.24C131.045 14.24 130.092 13.94 129.359 13.34C128.625 12.74 128.259 12.0067 128.259 11.14H130.439C130.439 11.54 130.612 11.8667 130.959 12.12C131.319 12.3733 131.779 12.5 132.339 12.5C132.752 12.5 133.079 12.4 133.319 12.2C133.559 12 133.679 11.7333 133.679 11.4C133.679 10.8667 133.445 10.54 132.979 10.42L130.579 9.76C129.232 9.38667 128.559 8.52667 128.559 7.18C128.559 6.40667 128.892 5.76 129.559 5.24C130.225 4.70667 131.085 4.44 132.139 4.44C133.325 4.44 134.232 4.70667 134.859 5.24C135.499 5.77333 135.819 6.47333 135.819 7.34H133.679C133.679 6.95333 133.532 6.65333 133.239 6.44C132.959 6.21333 132.565 6.1 132.059 6.1C131.672 6.1 131.352 6.19333 131.099 6.38C130.845 6.55333 130.719 6.78 130.719 7.06C130.719 7.56667 130.985 7.9 131.519 8.06L133.739 8.7C134.379 8.88667 134.899 9.20667 135.299 9.66C135.699 10.1 135.899 10.6133 135.899 11.2C135.899 12.1067 135.572 12.84 134.919 13.4C134.279 13.96 133.379 14.24 132.219 14.24ZM142.699 9.68V7.74H148.879V9.68H142.699ZM150.883 12.02V9.96L155.823 7.72L150.883 5.48V3.42L158.843 6.94V8.5L150.883 12.02Z" fill="#416EA8"/>
-<path d="M0 18H159.843V19H0V18Z" fill="#416EA8"/>
-</svg>
-</div>
-
+				<a href="https://docs.google.com/document/d/1AQMxIbY74FYXfo6cr97uwMcyhY0Z7qmqusQ3pHfnz8I/edit?usp=sharing" class="col col-lg-6 col-md-6" style="font-size: 18px;">Read More -></a>
+				
 	
 			
 			
@@ -1464,14 +1565,14 @@
   <br>
   <br>
   
-  <div class="card-deck">
- <div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col" >
+  <div class="row">
+ <div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col same-height" >
     <div class="card c">
-    	<img class="card-img-top i" src="{% static 'image/FakeJanvi.jpg' %}" alt="Card image">
-		<img class="card-img-top i" src="../static/image/FakeJanvi.jpg" alt="Card image">
+    	<img class="card-img-top i" src="{% static 'image/005.png' %}" alt="Card image">
+		
      
      	
-     	<br>
+     	
      <div class="card-body">
      	<br>
      	<h3 class="card-title cardtext"><b>Akshat Nigam</b></h3>
@@ -1494,13 +1595,11 @@
 </div>
 </div>
 
-<div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col" >
+<div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col same-height" >
     <div class="card c">
-    	<img class="card-img-top i" src="{% static 'image/FakeJanvi.jpg' %}" alt="Card image">
-		<img class="card-img-top i" src="../static/image/FakeJanvi.jpg" alt="Card image">
-     
-     	
-     	<br>
+    	<img class="card-img-top i" src="{% static 'image/002.png' %}" alt="Card image">
+		
+    
      <div class="card-body">
      	<br>
      	<h3 class="card-title cardtext"><b>Akanksha Gupta</b></h3>
@@ -1523,13 +1622,11 @@
 </div>
 </div>
 
-<div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col" >
+<div class="col-12 col-lg-4 col-md-6  py-3 py-sm-0 col same-height" >
     <div class="card c">
-    	<img class="card-img-top i" src="{% static 'image/FakeJanvi.jpg' %}" alt="Card image">
-		<img class="card-img-top i" src="../static/image/FakeJanvi.jpg" alt="Card image">
+    	<img class="card-img-top i" src="{% static 'image/004.png' %}" alt="Card image">
+		
      
-     	
-     	<br>
      <div class="card-body">
      	<br>
      	<h3 class="card-title cardtext"><b>Ayush Datta Jaiswal</b></h3>
