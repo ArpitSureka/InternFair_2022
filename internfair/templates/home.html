@@ -20,6 +20,15 @@
 			margin-right: 10px;
 		}
 	</style>
+	<script>
+		window.onload = () => {
+			var websiteadd = window.location.href;
+			let result = websiteadd.includes("/contact/");
+			if(result){
+				document.getElementById('contact').click();
+			}
+		};
+	</script>
 	<title>INTERN FAIR</title>
 </head>
 
@@ -39,10 +48,6 @@
 		  <ul class="nav navbar-nav navbar-right">
 			<li class="nav-item">
 				<a href="#Home" class="button">Home</a>
-			</li>
-			
-			<li class="nav-item">
-				<a href="#" class="button">Statistics</a>
 			</li>
 			<li class="nav-item">
 				<a href="#CVBlogs" class="button">CV Blogs</a>
