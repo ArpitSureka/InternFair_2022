@@ -16,6 +16,11 @@ from django.conf import settings
 from django.core.mail import send_mail
 import secrets
 import string
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
+import json
+import os
 
 # Create your views here.
 
@@ -36,7 +41,7 @@ def student(request):
         return render(request, "StudentLanding.html")
 
 def contact(request):
-    return render(request, "home.html")
+    return render(request, "contact.html")
 
 class StudentRegistration(CreateView):
     model = User
@@ -50,6 +55,19 @@ class StudentRegistration(CreateView):
 
 
     def form_valid(self, form):
+        
+
+        data_loc = os.path.abspath(os.path.dirname(__file__)) + "/firebase-admin.json"
+        # initializations 
+        cred = credentials.Certificate(data_loc)
+        firebase_admin.initialize_app(cred)
+        firestore_db = firestore.client()
+        # temp = "abhijitpandey5243455@udgam-passs"
+        data_id = []
+        snapshots = list(firestore_db.collection(u'Users').get())
+        for snapshot in snapshots:
+            data_id.append(snapshot.to_dict()["data_f"]["Id"])
+
         givenemail = str(form.cleaned_data.get('IITG_webmail'))
         givenid = str(form.cleaned_data.get('Udgam_transaction_id'))
         roll_number = str(form.cleaned_data.get('roll_number'))
@@ -57,8 +75,8 @@ class StudentRegistration(CreateView):
         iitgmail = "iitg.ac.in"
         trxn = "MOJO"
         if iitgmail.upper() in givenemail.upper() :
-            if trxn.upper() in givenid.upper() and len(givenid)==20:
-                if roll_number[:2]=='19' or roll_number[:2]=='20':
+            if givenid in data_id:
+                if roll_number[:2]=='20' or roll_number[:2]=='21':
                     user = form.save()
                     login(self.request, user)
                     return HttpResponseRedirect(reverse('StudentProfile',kwargs={'pk': user.id}))
@@ -66,7 +84,7 @@ class StudentRegistration(CreateView):
                     messages.info(self.request, 'Sorry, you are not eligible for Intern Fair')
                     return redirect('StudentRegistration')
             else:
-                messages.info(self.request, 'Invalid Payment Id')
+                messages.info(self.request, 'Invalid UDGAM Pass ID')
                 return redirect('StudentRegistration')
 
         else:
@@ -240,26 +258,28 @@ def forgotPassword(request):
 
 def sendPassword(request):
     if request.method == 'POST':
-        emailID = request.POST.get('emailID')
-        student = Students.objects.filter(email=emailID).first()
-        if student:
-            if student.user.is_student:
-                N = 10
-                password = ''.join(secrets.choice(string.ascii_uppercase + string.digits)
-                                                                for i in range(N))
-                print("The generated random password : " + str(password))
-                subject = "Password reset for Intern Fair"
-                message = "Dear user,\r\r\nYour new temporary password is: " + str(password) + ".\nIt is highly advised to change your password after logging in using the above password.\r\r\nAll the best for Intern Fair 2022.\r\r\nRegards\nTeam Intern Fair\nUDGAM'22 "
-                student.user.set_password(str(password))
-                student.user.save()
-                email_from = settings.EMAIL_HOST_USER
-                send_mail(subject,message,email_from,[emailID],fail_silently=False)
-                return render(request, "ForgotPassword.html",{'message': 'Please check your inbox for your temporary password'})
-            else:
-                return render(request, "ForgotPassword.html",{'message':'This email is not registered for InternFair 2022. If you are a recruiter and lost your password please contact the InternFair team'})
-        else:
-            return render(request, "ForgotPassword.html",{'message': 'Please enter your correct IITG Webmail'})
-    
+       emailID = request.POST.get('emailID')
+       student = Students.objects.filter(email=emailID).first()
+       if student:
+           if student.user.is_student:
+               N = 10
+               password = ''.join(secrets.choice(string.ascii_uppercase + string.digits)
+                                                               for i in range(N))
+               print("The generated random password : " + str(password))
+               subject = "Password reset for Intern Fair"
+               message = "Dear user,\r\r\nYour new temporary password is: " + str(password) + ".\nIt is highly advised to change your password after logging in using the above password.\r\r\nAll the best for Intern Fair 2022.\r\r\nRegards\nTeam Intern Fair\nUDGAM'22 "
+               student.user.set_password(str(password))
+               student.user.save()
+               email_from = settings.EMAIL_HOST_USER
+               send_mail(subject,message,email_from,[emailID],fail_silently=False)
+               return render(request, "ForgotPassword.html",{'message': 'Please check your inbox for your temporary password'})
+           else:
+               return render(request, "ForgotPassword.html",{'message':'This email is not registered for InternFair 2022. If you are a recruiter and lost your password please contact the InternFair team'})
+       else:
+           return render(request, "ForgotPassword.html",{'message': 'Please enter your correct IITG Webmail'})
+  
+
+
 def sentPassword(request):
     return render(request, "sentPassword.html")
 
