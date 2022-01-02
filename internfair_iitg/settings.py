@@ -96,11 +96,12 @@ WSGI_APPLICATION = 'internfair_iitg.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'internfair$default',
-        'USER': 'internfair',
-        'PASSWORD': 'if2021@UDGAM',
-        'HOST': 'internfair.mysql.pythonanywhere-services.com',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'internfair',
+        'USER': 'postgres',
+        'PASSWORD': 'Udgam2022',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
