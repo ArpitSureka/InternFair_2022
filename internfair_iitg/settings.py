@@ -103,6 +103,13 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': 'internfair$default',
+    #     'USER': 'internfair',
+    #     'PASSWORD': 'if2021@UDGAM',
+    #     'HOST': 'internfair.mysql.pythonanywhere-services.com',
+    # }
 }
 
 
