@@ -59,8 +59,10 @@ class StudentRegistration(CreateView):
 
         data_loc = os.path.abspath(os.path.dirname(__file__)) + "/firebase-admin.json"
         # initializations 
-        cred = credentials.Certificate(data_loc)
-        firebase_admin.initialize_app(cred)
+        if not firebase_admin._apps:
+            cred = credentials.Certificate(data_loc)
+            default_app = firebase_admin.initialize_app(cred)
+        
         firestore_db = firestore.client()
         # temp = "abhijitpandey5243455@udgam-passs"
         data_id = []
