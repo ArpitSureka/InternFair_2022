@@ -76,7 +76,7 @@
         <!-- First row -->
         {% for intern in interns %}
         <tr style="border-bottom: 1px solid #B6B6B6; padding: 10px !important;" class='internshipRow' id="{{intern.id}}" onclick="openApplyModal('{{intern.id}}')">
-          <td style="border: none !important; padding: 10px !important;"><img width="30" class='entry-logo' src="{{intern.startup.logo.url}}"></img></td>
+          <td style="border: none !important; padding: 10px !important;"><svg data-jdenticon-value="{{intern.id}}" width="25" height="25"></svg></td>
           <td style="border: none !important; padding: 10px !important;">{{ intern.startup.companyName }}</td>
           <td style="border: none !important; padding: 10px !important;">{{ intern.profile }}</td>
           <td style="border: none !important; padding: 10px !important;">{{ intern.location }}</td>
@@ -87,7 +87,7 @@
           <div class="applyCard" style="margin:auto;">
             <div class="row justify-content-center">
               <div class="col-12">
-                <img height="80" src="{{intern.startup.logo.url}}"></img>
+                <svg data-jdenticon-value="{{intern.id}}" width="60" height="60"></svg>
               </div>
             </div>
             <div class="row" style="padding-top: 10px; padding-bottom: 3px;">
