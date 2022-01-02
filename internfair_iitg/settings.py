@@ -110,7 +110,7 @@ DATABASES = {
 #         'PASSWORD': 'if2021@UDGAM',
 #         'HOST': 'internfair.mysql.pythonanywhere-services.com',
 #     }
-# }
+}
 
 
 # Password validation
