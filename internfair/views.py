@@ -103,6 +103,7 @@ def studentLogin(request):
     if request.method == 'POST':
         username = request.POST.get('Username')
         password = request.POST.get('Password')
+        print(username + " " + password)
         user = authenticate(username=username, password=password)
         if user:
             if user.is_student:
